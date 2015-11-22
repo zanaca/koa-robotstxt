@@ -1,12 +1,12 @@
 var request = require('supertest');
 var join = require('path').join;
-var favicon = require('..');
+var robotstxt = require('..');
 var koa = require('koa');
 var fs = require('fs');
 
 describe('robotstxt()', function(){
   var path = join(__dirname, 'fixtures', 'robots.txt');
-  
+
   it('should only respond on /robots.txt', function(done){
     var app = koa();
 
@@ -41,7 +41,7 @@ describe('robotstxt()', function(){
     .expect(405, done);
   });
 
-  it('should send the favicon', function(done){
+  it('should send the robots', function(done){
     var body = fs.readFileSync(path);
 
     var app = koa();
