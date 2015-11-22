@@ -4,7 +4,7 @@ var robotstxt = require('./');
 
 var app = koa();
 
-app.use(robotstxt());
+app.use(robotstxt('./test/fixtures/robots.txt'));
 
 app.use(function *response (next){
   this.body = 'Hello World';

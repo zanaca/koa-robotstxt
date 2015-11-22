@@ -36,10 +36,10 @@ module.exports = function (path, options){
       return;
     }
 
-    if (!icon) icon = yield fs.readFile(path);
+    if (!file) file = yield fs.readFile(path);
 
     this.set('Cache-Control', 'public, max-age=' + (maxAge / 1000 | 0));
     this.type = 'text/plain';
-    this.body = icon;
+    this.body = file;
   };
 };
