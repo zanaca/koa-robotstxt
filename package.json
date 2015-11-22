@@ -1,0 +1,42 @@
+{
+  "name": "koa-robotstxt",
+  "description": "Robots.txt bounce middleware for koa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koajs/robotstxt.git"
+  },
+  "version": "1.0.0",
+  "keywords": [
+    "koa",
+    "middleware",
+    "robots.txt"
+  ],
+  "files": [
+    "index.js"
+  ],
+  "devDependencies": {
+    "istanbul-harmony": "0",
+    "should": "~7.1.1",
+    "koa": "0",
+    "mocha": "^2.3.4",
+    "supertest": "0"
+  },
+  "dependencies": {
+    "mz": "^1.0.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "NODE_ENV=test mocha --harmony-generators --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+  },
+  "bugs": {
+    "url": "https://github.com/koajs/robotstxt/issues"
+  },
+  "homepage": "https://github.com/koajs/robotstxt#readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "author": "Zanaca <carlos@zanaca.com> (http://zanaca.com)"
+}
