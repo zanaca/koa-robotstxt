@@ -3,9 +3,9 @@
   "description": "Robots.txt bounce middleware for koa",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zanaca/robotstxt.git"
+    "url": "git+https://github.com/zanaca/koa-robotstxt.git"
   },
-  "version": "1.0.5",
+  "version": "1.0.6",
   "keywords": [
     "koa",
     "middleware",
@@ -31,9 +31,9 @@
     "test-travis": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
   },
   "bugs": {
-    "url": "https://github.com/zanaca/robotstxt/issues"
+    "url": "https://github.com/zanaca/koa-robotstxt/issues"
   },
-  "homepage": "https://github.com/zanaca/robotstxt#readme",
+  "homepage": "https://github.com/zanaca/koa-robotstxt#readme",
   "main": "index.js",
   "directories": {
     "test": "test"
