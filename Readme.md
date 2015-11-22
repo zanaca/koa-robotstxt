@@ -1,4 +1,4 @@
-# koa-robotstxt [![Build Status](https://travis-ci.org/koajs/robotstxt.svg)](https://travis-ci.org/koajs/robotstxt)
+# koa-robotstxt [![Build Status](https://travis-ci.org/zanaca/robotstxt.svg)](https://travis-ci.org/zanaca/robotstxt)
 
  Koa middleware for serving the robots.txt file..
 
