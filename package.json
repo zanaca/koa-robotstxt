@@ -5,6 +5,9 @@
     "type": "git",
     "url": "git+https://github.com/zanaca/koa-robotstxt.git"
   },
+  "engines": {
+      "node" : ">=7.6.0"
+  },
   "version": "1.0.8",
   "keywords": [
     "koa",
