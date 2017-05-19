@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/zanaca/koa-robotstxt.git"
   },
-  "version": "1.0.7",
+  "version": "1.0.8",
   "keywords": [
     "koa",
     "middleware",
