@@ -6,9 +6,9 @@
     "url": "git+https://github.com/zanaca/koa-robotstxt.git"
   },
   "engines": {
-      "node" : ">=7.6.0"
+    "node": ">=7.6.0"
   },
-  "version": "1.0.8",
+  "version": "1.0.9",
   "keywords": [
     "koa",
     "middleware",
