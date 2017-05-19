@@ -12,7 +12,7 @@ describe('robotstxt()', function(){
 
     app.use(robotstxt(path));
 
-    app.use(function *(next){
+    app.use(function *generator(next){
       (this.body == null).should.be.true;
       (this.get('Content-Type') == null).should.be.true;
       this.body = 'OK';
