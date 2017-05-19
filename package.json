@@ -5,7 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/zanaca/koa-robotstxt.git"
   },
-  "version": "1.0.6",
+  "version": "1.0.7",
   "keywords": [
     "koa",
     "middleware",
@@ -17,7 +17,7 @@
   "devDependencies": {
     "istanbul-harmony": "0",
     "should": "~7.1.1",
-    "koa": "0",
+    "koa": "~2.2.0",
     "mocha": "^2.3.4",
     "supertest": "0"
   },
@@ -26,9 +26,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "test": "NODE_ENV=test mocha --harmony-generators --require should --reporter spec",
-    "test-cov": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
-    "test-travis": "NODE_ENV=test node --harmony-generators ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
+    "test": "NODE_ENV=test mocha --require should --reporter spec",
+    "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
+    "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
   },
   "bugs": {
     "url": "https://github.com/zanaca/koa-robotstxt/issues"

@@ -8,7 +8,7 @@ describe('robotstxt()', function(){
   var path = join(__dirname, 'fixtures', 'robots.txt');
 
   it('should only respond on /robots.txt', function(done){
-    var app = koa();
+    var app = new koa();
 
     app.use(robotstxt(path));
 
@@ -24,7 +24,7 @@ describe('robotstxt()', function(){
   });
 
   it('should 404 if `path` is missing', function(done){
-    var app = koa();
+    var app = new koa();
     app.use(robotstxt());
     request(app.listen())
     .post('/robots.txt')
@@ -32,7 +32,7 @@ describe('robotstxt()', function(){
   });
 
   it('should not accept POST requests', function(done){
-    var app = koa();
+    var app = new koa();
     app.use(robotstxt(path));
 
     request(app.listen())
@@ -42,7 +42,7 @@ describe('robotstxt()', function(){
   });
 
   it('should set cache-control headers', function(done){
-    var app = koa();
+    var app = new koa();
     app.use(robotstxt(path));
     request(app.listen())
     .get('/robots.txt')
@@ -52,7 +52,7 @@ describe('robotstxt()', function(){
 
   describe('options.maxAge', function(){
     it('should set max-age', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: 5000 }));
       request(app.listen())
       .get('/robots.txt')
@@ -61,7 +61,7 @@ describe('robotstxt()', function(){
     });
 
     it('should accept 0', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: 0 }));
       request(app.listen())
       .get('/robots.txt')
@@ -70,7 +70,7 @@ describe('robotstxt()', function(){
     });
 
     it('should be valid delta-seconds', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: 1234 }));
       request(app.listen())
       .get('/robots.txt')
@@ -79,7 +79,7 @@ describe('robotstxt()', function(){
     });
 
     it('should floor at 0', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: -4000 }));
       request(app.listen())
       .get('/robots.txt')
@@ -88,7 +88,7 @@ describe('robotstxt()', function(){
     });
 
     it('should ceil at 31556926', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: 900000000000 }));
       request(app.listen())
       .get('/robots.txt')
@@ -97,7 +97,7 @@ describe('robotstxt()', function(){
     });
 
     it('should accept Infinity', function(done){
-      var app = koa();
+      var app = new koa();
       app.use(robotstxt(path, { maxAge: Infinity }));
       request(app.listen())
       .get('/robots.txt')

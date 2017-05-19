@@ -4,7 +4,7 @@
  */
 
 var resolve = require('path').resolve;
-var fs = require('mz/fs');
+var fs = require('fs');
 
 /**
  * Deliver robots.txt
@@ -35,8 +35,8 @@ module.exports = function (path, options){
       this.set('Allow', 'GET, HEAD, OPTIONS');
       return;
     }
+    if (!file) file = fs.readFileSync(path);
 
-    if (!file) file = yield fs.readFile(path);
 
     this.set('Cache-Control', 'public, max-age=' + (maxAge / 1000 | 0));
     this.type = 'text/plain';
